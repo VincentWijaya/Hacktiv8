@@ -1,0 +1,95 @@
+!. Newton 2 Law
+=================
+ALGORITMA
+=================
+  1. Siapkan massa
+  2. Siapkan percepatan
+  3. Siapkan label hasil
+  4. Hitung hasil dengan rumus:
+      massa*percepatan
+  5. Tampilkan hasil
+
+=================
+PSEUDOCODE
+=================
+STORE massa with any number
+STORE percepatan with any number
+STORE hasil without any value
+CALCULATE massa * percepatan
+SET hasil value with calculataion result
+DISPLAY hasil
+
+2. Tahun Kabisat
+=================
+ALGORITMA
+=================
+  1. Siapkan tahun
+  2. Hitung tahun:
+      2.a Jika sisa pembagian dari tahun dibagi 4 tidak sama dengan 0
+          maka tampilkan bukan tahun kabisat!
+      2.b Jika sisa pembagian dari tahun dibagi 100 sama dengan 0 dan
+          sisa pembagian dari tahun dibagi 400 tidak sama dengan 0 maka
+          tampilkan bukan tahun kabisat!
+      2.c Tampilkan tahun kabisat!
+
+=================
+PSEUDOCODE
+=================
+STORE tahun with any number
+IF tahun%4 != 0 THEN
+  DISPLAY bukan kabisat!
+ELSE IF tahun%100 = 0 AND tahun%400 != 0 THEN
+  DISPLAY bukan kabisat!
+ELSE DISPLAY kabisat!
+END IF
+
+3. Laundry Day
+=================
+ALGORITMA
+=================
+  1. Simpan counter dengan angka 0
+  2. Ulangi step 3 selama counter masih dibawah 20. Jika counter sudah 20,
+     lanjut ke step 4
+  3. Tambah counter dengan 1, kembali ke step 2
+  4. Tampilkan mesin cuci akan berjalan!
+
+=================
+PSEUDOCODE
+=================
+STORE baju with 20
+STORE counter with 0
+WHILE counter < baju DO
+  DISPLAY baju dimasukkan!
+  SET counter = counter + 1
+END WHILE
+DISPLAY mesin cuci akan berjalan!
+
+
+4. Periksa Kuku
+=================
+ALGORITMA
+=================
+  1. Simpan counter dengan angka 0
+  2. Simpan kuku dengan angka 1 //True (kuku panjang)
+  2. Ulangi step 3 selama counter masih dibawah 40. Jika counter sudah 40,
+     lanjut ke step 4
+  3. Tambah counter dengan 1, cek:
+      3.a Jika kuku == 1 tampilkan kamu mendapat hukuman! dan kembali ke step 2
+      3.b Tampilkan kamu terbaik! dan kembali ke step 2
+  4. Tampilkan saatnya kita belajar!
+
+=================
+PSEUDOCODE
+=================
+STORE siswa with 40
+STORE counter with 0
+STORE kuku with 1 //True (kuku panjang)
+WHILE counter < 40 DO
+  IF kuku == 1 THEN
+    DISPLAY kamu mendapat hukuman!
+  ELSE
+    DISPLAY kamu terbaik!
+  END IF
+  SET counter = counter + 1
+END WHILE
+DISPLAY saatnya kita belajar!
