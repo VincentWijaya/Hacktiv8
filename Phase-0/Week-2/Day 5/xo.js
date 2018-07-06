@@ -1,11 +1,32 @@
 function xo(str) {
-  var splitO = str.split('o');
-  var splitX = str.split('x');
+  //-ALAGUE-
+  // var splitO = str.split('o');
+  // var splitX = str.split('x');
+  //
+  // if (splitO.length-1 !== splitX.length-1) {
+  //   return false;
+  // } else {
+  //   return true;
+  // }
 
-  if (splitO.length-1 !== splitX.length-1) {
-    return false;
-  } else {
+  //Yang bener
+  var splitO = 0;
+  var splitX = 0;
+
+  for (i = 0; i < str.length; i++) {
+    if (str[i] === 'x') {
+      splitO = splitO + 1;
+    } else if (str[i] === 'o') {
+      splitX = splitX + 1;
+    } else {
+      return 'Ngawur lu!';
+    }
+  }
+
+  if (splitO === splitX) {
     return true;
+  } else {
+    return false;
   }
 
 }

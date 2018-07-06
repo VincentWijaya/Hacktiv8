@@ -1,9 +1,18 @@
 function balikKata(kata) {
-  var split = kata.split("");
-  var reverse = split.reverse();
-  var join = reverse.join("");
+  //-ALAGUE-
+  // var split = kata.split("");
+  // var reverse = split.reverse();
+  // var join = reverse.join("");
+  //
+  // return join;
 
-  return join;
+  //Yang bener
+  var newStr = '';
+
+  for (i = kata.length - 1; i >= 0 ; i--) {
+    newString += kata[i];
+  }
+  return newStr;
 }
 
 // TEST CASES
