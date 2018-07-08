@@ -15,9 +15,9 @@ function xo(str) {
 
   for (i = 0; i < str.length; i++) {
     if (str[i] === 'x') {
-      splitO = splitO + 1;
+      splitO += 1;
     } else if (str[i] === 'o') {
-      splitX = splitX + 1;
+      splitX += 1;
     } else {
       return 'Ngawur lu!';
     }
