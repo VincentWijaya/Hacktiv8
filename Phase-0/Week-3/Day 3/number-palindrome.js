@@ -1,18 +1,17 @@
 function angkaPalindrome(num) {
-  let num1 = num;
-  let angka= num1.toString();
-  if(num1<9){
-    return num+1;
-  }
-  if(num1===9){
-    return 11;
-  }
-  while(angka!==angka.split('').reverse().join('')){
-    angka = num1.toString();
-    num1++;
-  }
-  return num1-1;
+  var angka = num.toString();
 
+  if(num < 9){
+    return num + 1;
+  } else if (num === 9) {
+    return 11;
+  } else {
+    while(angka !== angka.split('').reverse().join('')){
+      angka = num.toString();
+      num++;
+    }
+    return num;
+  }
 }
 
 // TEST CASES
