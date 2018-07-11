@@ -1,8 +1,13 @@
 function pasanganTerbesar(num) {
   // you can only write your code here!
-  var arr = num.toString().split('');
-
-  return arr;
+  var numberAsli = num.toString();
+  var terbesarSementara = 0;
+  for (var i = 0; i < numberAsli.length; i++) {
+    if (numberAsli[i] + numberAsli[i+1] > terbesarSementara) {
+      terbesarSementara = numberAsli[i] + numberAsli[i+1];
+    }
+  }
+  return terbesarSementara;
 }
 
 // TEST CASES
