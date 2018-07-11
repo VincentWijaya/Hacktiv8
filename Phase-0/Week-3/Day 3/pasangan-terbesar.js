@@ -7,7 +7,7 @@ function pasanganTerbesar(num) {
       terbesarSementara = numberAsli[i] + numberAsli[i+1];
     }
   }
-  return terbesarSementara;
+  return Number(terbesarSementara);
 }
 
 // TEST CASES
