@@ -3,6 +3,8 @@
 //contoh output
 //["0001", "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro"]
 
+var input = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"];
+
 function dataHandling2(input) {
   input.splice(1, 2, 'Roman Alamsyah Elsharawy', 'Provinsi Bandar Lampung');
   input.splice(4, 1, 'Pria', 'SMA Internasional Metro');
@@ -64,4 +66,4 @@ function dataHandling2(input) {
   return nama;
 }
 
-console.log(dataHandling2(["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"]));
+console.log(dataHandling2(input));
