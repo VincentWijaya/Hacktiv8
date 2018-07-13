@@ -1,17 +1,17 @@
 function perkalianUnik(arr) {
   // you can only write your code here!
-  var hasil = [];
+  var hasil = []
 
   for (var i = 0; i < arr.length; i++) {
-    var kali  = 1;
-    for (var j = 0; j < arr.length; j++) {
+    var kali = 1
+    for (var j= 0; j < arr.length; j++) {
       if (i !== j) {
-        kali *= arr[j];
+        kali *= arr[j]
       }
     }
-    hasil.push(kali);
+    hasil.push(kali)
   }
-  return hasil;
+  return hasil
 }
 
 // TEST CASES
