@@ -1,18 +1,31 @@
 function cariModus(arr) {
   // you can only write your code here!
   var hasil = 0
-  var sorted = []
-  var patokan = 1
+  var unik = [] // [10, 4, 5, 2]
+  var count = []// [1, 2, 1, 1]
 
   for (var i = 0; i < arr.length; i++) {
-    if (arr[i] === 1) {
-      sorted.push(arr[i])
-    } else if (sorted === [1] && arr[i] > patokan) {
-      patokan = arr[i]
-      sorted.push(arr[i])
+    var index = unik.indexOf(arr[i])
+    if (index === -1) {
+      unik.push(arr[i])
+      count.push(1)
+    } else if (index !== -1) {
+      count[index] = count[index] + 1
     }
   }
-  return sorted
+
+  for (var j = 0; j < count.length; j++) {
+    if (count[j] > 1 && unik.length > 1) {
+      hasil = unik[j]
+      break
+    }
+  }
+
+  if (hasil === 0) {
+    return -1
+  } else {
+    return hasil
+  }
 }
 
 // TEST CASES
