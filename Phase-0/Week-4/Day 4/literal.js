@@ -9,8 +9,17 @@ function changeMe(arr) {
 
   for (var i = 0; i < arr.length; i++) {
     hasil['firstName'] = arr[i][0]
+    hasil['lastName'] = arr[i][1]
+    hasil['gender'] = arr[i][2]
+
+    if (arr[i][3] === undefined || arr[i][3] >= 2018) {
+      hasil['age'] = 'Invalid Birth Year!'
+    } else {
+      hasil['age'] = Number(arr[i][3])
+    }
+    console.log(hasil);
   }
-  console.log(hasil)
+
 }
 
 // TEST CASES
