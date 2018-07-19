@@ -1,8 +1,25 @@
 function sorting(arrNumber) {
   // code di sini
-  var sorted = arrNumber.sort(function(value1, value2) { return value1 < value2 })
+  var done = false
 
-  return sorted
+  while (!done) {
+    done = true
+    for (var i = 1; i < arrNumber.length; i++) {
+      if (arrNumber[i - 1] > arrNumber[i]) {
+        done = false;
+        var temp = arrNumber[i - 1];
+        arrNumber[i - 1] = arrNumber[i];
+        arrNumber[i] = temp;
+      }
+    }
+  }
+
+  var hasil = []
+  for (var j = arrNumber.length - 1; j >= 0; j--) {
+    hasil.push(arrNumber[j])
+  }
+
+  return hasil
 }
 
 function getTotal(arrNumber) {
