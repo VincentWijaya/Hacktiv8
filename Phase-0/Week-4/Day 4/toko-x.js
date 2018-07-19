@@ -1,10 +1,38 @@
 function countProfit(shoppers) {
+  // you can only write your code here!
   let listBarang = [ ['Sepatu Stacattu', 1500000, 10],
                      ['Baju Zoro', 500000, 2],
                      ['Sweater Uniklooh', 175000, 1]
                    ];
+  var stokSementara = 0
+  var hasil = []
 
-  // you can only write your code here!
+  for (var i = 0; i < listBarang.length; i++) {
+      var temp = {  product: listBarang[i][0],
+                    shoppers: [],
+                    leftOver: listBarang[i][2],
+                    totalProfit: 0
+                 }
+      stokSementara = listBarang[i][2]
+      if (shoppers.length !== 0) {
+        for (var j = 0; j < shoppers.length; j++) {
+          var name = shoppers[j].name
+          var product = shoppers[j].product
+          var amount = shoppers[j].amount
+
+          if (listBarang[i][0] === product && stokSementara >= amount) {
+            temp.shoppers.push(name)
+            stokSementara = stokSementara - amount
+          }
+        }
+        temp.leftOver = stokSementara
+        temp.totalProfit = (listBarang[i][2] - stokSementara) * listBarang[i][1]
+        hasil.push(temp)
+      } else {
+        return []
+      }
+  }
+  return hasil
 }
 
 // TEST CASES
