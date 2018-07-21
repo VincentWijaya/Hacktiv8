@@ -26,7 +26,7 @@ function getTotal(arrNumber) {
   var hasil = 'angka paling besar adalah ' + arrNumber[0] + ' dan jumlah kemunculan sebanyak '+ count +' kali'
 
   if (arrNumber.length === 0) {
-    return 'tidak ada data!'
+    return ''
   } else {
     return hasil
   }
