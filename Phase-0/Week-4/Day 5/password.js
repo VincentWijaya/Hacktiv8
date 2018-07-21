@@ -1,16 +1,14 @@
 function changeVocals (str) {
   //code di sini
   var splitted = str.split('')
-  var alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  var alphabet = 'bjvfpBJVFP'
   var vocal = 'aiueoAIUEO'
-  var index
   var hasil = []
 
   for (var i = 0; i < splitted.length; i++) {
     for (var j = 0; j < vocal.length; j++) {
       if (splitted[i] === vocal[j]) {
-        index = alphabet.indexOf(splitted[i]) + 1
-        splitted[i] = alphabet[index]
+        splitted[i] = alphabet[j]
       }
     }
     hasil.push(splitted[i])
@@ -22,7 +20,7 @@ function reverseWord (str) {
   //code di sini
   var reverse = []
 
-  for (var i = str.length - 1; i > 0; i--) {
+  for (var i = str.length - 1; i >= 0; i--) {
     reverse.push(str[i])
   }
 
@@ -35,7 +33,7 @@ function setLowerUpperCase (str) {
 
   for (var i = 0; i < str.length; i++) {
     if (str[i] === str[i].toUpperCase()) {
-      hasil += str[i]
+      hasil += str[i].toLowerCase()
     } else if (str[i] !== str[i].toUpperCase()) {
       hasil += str[i].toUpperCase()
     }
