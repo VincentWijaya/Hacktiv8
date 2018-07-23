@@ -25,18 +25,18 @@ Examples:
 */
 function matrixTranspose(matriks) {
   // write your code here
-  var baris = []
-  var kolom = []
   var hasil = []
 
-  for (var i = 0; i < matriks.length; i++) {
-    for (var j = 0; j < matriks[i].length; j++) {
-      baris.push(matriks[j][i])
+  for (var i = 0; i < matriks[0].length; i++) {
+      var temp = []
+    for (var j = 0; j < matriks.length; j++) {
+      temp.push(matriks[j][i])
     }
+    hasil.push(temp)
   }
 
   // hasil.push(baris, kolom)
-  return baris
+  return hasil
 }
 
 console.log(matrixTranspose([[1, 2], [3, 4], [5, 6]]))
@@ -54,7 +54,7 @@ console.log(matrixTranspose([[1, 2], [3, 4], [5, 6]]))
   ]
 */
 
-// console.log(matrixTranspose([[1, 2], [3, 4]]));c
+console.log(matrixTranspose([[1, 2], [3, 4]]));
 
 /*
   input:
@@ -69,7 +69,7 @@ console.log(matrixTranspose([[1, 2], [3, 4], [5, 6]]))
   ]
 */
 //
-// console.log(matrixTranspose([[1, 2]]))
+console.log(matrixTranspose([[1, 2]]))
 /*
   input:
   [
@@ -82,7 +82,7 @@ console.log(matrixTranspose([[1, 2], [3, 4], [5, 6]]))
   ]
 */
 
-// console.log(matrixTranspose([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
+console.log(matrixTranspose([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
 /*
   input = [
     [1, 2, 3],

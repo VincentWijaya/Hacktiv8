@@ -33,6 +33,30 @@ function invokeSpell (input) {
   ];
 
   // write your code here
+  var counterW = 0
+  var counterQ = 0
+  var counterE = 0
+  var hasil = ''
+
+  for (var i = 0; i < input.length; i++) {
+    if (input[i] === 'q') {
+      counterQ++
+    } else if (input[i] === 'w') {
+      counterW++
+    } else if (input[i] === 'e') {
+      counterE++
+    } else {
+      return 'Combination does not exist'
+    }
+  }
+
+  for (var j = 0; j < spells.length; j++) {
+    if (spells[j].q === counterQ && spells[j].w === counterW && spells[j].e === counterE) {
+      hasil = spells[j].spellName
+    }
+  }
+
+  return hasil
 }
 
 console.log(invokeSpell('qwe')); // Deafening Blast
