@@ -23,24 +23,18 @@ RULES:
 
 /* PSEUDOCODE
 
-STORE COUNTER WITH 0
-STORE COUNTERDALAM WITH 0
-STORE RESULT WITH []
-STORE CONDITION WITH true
+STORE 'hasil' with empty array
+STORE 'i' with 0
+STORE 'j' with 0
 
-WHILE COUNTER < ARR1.Length
-  STORE CONDITION WITH true
-    WHILE COUNTERDALAM < ARR2.Length
-      IF ARR1[COUNTER] == ARR2[COUNTERDALAM]
-        STORE CONDITION WITH false
-      DO COUNTERDALAM = COUNTERDALAM +1
-
-  IF CONDITION == true
-  PUSH RESULT WITH ARR1[COUNTER]
-  DO COUNTER = COUNTER +1
-
-
-RETURN RESULT
+FOR 'i' < arr1
+  STORE 'condition' = true
+  FOR 'j' < arr2
+    IF 'arr1[i]' = 'arr2[j]'
+      'condition' = false
+  IF 'condition' = true
+    STORE 'hasil' with 'arr1[i]'
+DISPLAY 'hasil'
 */
 
 function findNotRelative(arr1, arr2) {
