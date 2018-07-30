@@ -40,17 +40,16 @@ RULE:
 
 function howManyGifts(maxBudget, gifts){
   // Code here
-  var sort = gifts.sort(function(a, b){return a-b})
-  var totalBarang = 0
+  var sort = gifts.sort(function (a,b) {return a-b })
+  var counter = 0
 
   for (var i = 0; i < sort.length; i++) {
     if (maxBudget >= sort[i]) {
       maxBudget -= sort[i]
-      totalBarang++
+      counter++
     }
   }
-
-  return totalBarang
+  return counter
 }
 
 console.log(howManyGifts(30000, [15000, 12000, 5000, 3000, 10000])); // 4

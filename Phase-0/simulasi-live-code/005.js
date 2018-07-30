@@ -32,27 +32,20 @@ Standard kelulusan adalah minimum 70.
 function getReport(studentGrades) {
   // only code here..
   var hasil = [
-    { classCode: 'A', passed: [], failed: [] },
-    { classCode: 'B', passed: [], failed: [] },
-    { classCode: 'C', passed: [], failed: [] }
+    { classCode: 'A', passed: [], failed: []},
+    { classCode: 'B', passed: [], failed: []},
+    { classCode: 'C', passed: [], failed: []}
   ]
 
   for (var i = 0; i < hasil.length; i++) {
     for (var j = 0; j < studentGrades.length; j++) {
-      if (
-        hasil[i].classCode === studentGrades[j].classCode &&
-        studentGrades[j].score >= 70
-      ) {
+      if (hasil[i].classCode === studentGrades[j].classCode && studentGrades[j].score >= 70) {
         hasil[i].passed.push(studentGrades[j].name)
-      } else if (
-        hasil[i].classCode === studentGrades[j].classCode &&
-        studentGrades[j].score < 70
-      ) {
+      } else if (hasil[i].classCode === studentGrades[j].classCode && studentGrades[j].score < 70) {
         hasil[i].failed.push(studentGrades[j].name)
       }
     }
   }
-
   return hasil
 }
 

@@ -56,23 +56,36 @@ RULE:
 
 */
 
+/*
+PSEUDOCODE
+
+STORE hasil with empty array
+STORE i with 2
+STORE j with 2
+
+FOR i less than or equals to num
+  STORE isPrime with true
+  FOR j less than or equals to num
+    IF i modulus by j equals to 0 AND j is not equals to i
+      SET isPrime with false
+  IF isPrime equals to true
+    STORE hasil with i
+
+DISPLAY hasil
+
+*/
+
 function getUglyNumber(num) {
   var hasil = []
 
   for (var i = 2; i <= num; i++) {
-    var number = 2
-
-    while (number%2 === 0) {
-      number = number / 2
+    var isPrime = true
+    for (var j = 2; j <= num; j++) {
+      if (i%j === 0 && j !== i) {
+        isPrime = false
+      }
     }
-    while (number%3 === 0) {
-      number = number / 3
-    }
-    while (number%5 === 0) {
-      number = number / 5
-    }
-
-    if (number === 1) {
+    if (isPrime === true) {
       hasil.push(i)
     }
   }

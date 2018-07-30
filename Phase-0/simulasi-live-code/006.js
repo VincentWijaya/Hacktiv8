@@ -15,19 +15,17 @@ RULES
 
 function angkaTerbesar(sentence) {
   // you can only write your code here!
-  nums = sentence.slice();
+  if (sentence.length === 0) return -1
 
-  if (nums.length == 0) return -1
+  if (sentence.length === 1) return sentence[0]
 
-  if (nums.length == 1) return nums[0]
-
-  if (nums[0] < nums[1]) {
-    nums.splice(0, 1)
+  if (sentence[0] < sentence[1]) {
+    sentence.splice(0, 1)
   } else {
-    nums.splice(1, 1)
+    sentence.splice (1, 1)
   }
 
-  return angkaTerbesar(nums)
+  return angkaTerbesar(sentence)
 }
 
 // TEST CASES
