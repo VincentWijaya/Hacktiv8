@@ -11,11 +11,19 @@ function akan mereturn sebuah sebuah number yang hanya sisa baginya nol dari bil
 - Dilarang menggunakan regex .match dan lainnya!
 - Tidak boleh membuat variable diluar function
 - Tidak boleh menambahkan parameter baru
-- Tidak boleh menggunakan looping while/for    
+- Tidak boleh menggunakan looping while/for
 */
 
 function dividableRecursive (array, num) {
+  var hasil = ''
 
+  if (array.length === 0) return hasil
+
+  if (array[0]%num === 0) {
+    hasil += array[0] + ' '
+  }
+  
+  return hasil + dividableRecursive(array.slice(1), num)
 }
 
 // DRIVER CODE

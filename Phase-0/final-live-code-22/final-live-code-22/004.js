@@ -24,30 +24,34 @@ PADA MASING-MASING TEST CASE SUDAH TERDAPAT RANGE TERBESAR DAN TERKECIL
 
 function missingNum ( arr ) {
   // Your code here
-  var terkecil = arr[0][0]
-  var terbesar = arr[0][0]
+  var temp = []
   var hasil = []
 
   for (var i = 0; i < arr.length; i++) {
     for (var j = 0; j < arr[i].length; j++) {
-      if (arr[i][j] !== ' ' && terkecil > arr[i][j]) {
-        terkecil = arr[i][j]
-      }
-      if (arr[i][j] !== ' ' && terbesar < arr[i][j]) {
-        terbesar = arr[i][j]
-      }
+      temp.push(arr[i][j])
     }
   }
 
-  var temp = []
-  var tambah = terkecil
+  var min = temp[0]
+  var max = temp.sort(function(a, b) {return b-a})[0]
 
-  for (var k = 0; k < terbesar; k++) {
-    if (i < terbesar) {
-      temp.push(tambah++)
+  for (var k = 0; k < temp.length; k++) {
+    if (min > temp[k] && temp[k] !== ' ') {
+      min = temp[k]
     }
   }
-  return terbesar
+
+  for (var l = 0; l < temp.length; l++) {
+    for (var m = min + 1; m < max; m++) {
+      if (temp[l] == ' ' && temp.indexOf(m) === -1) {
+        temp[l] = m
+        hasil.push(temp[l])
+      }
+    }
+  }
+  
+  return hasil
 }
 
 

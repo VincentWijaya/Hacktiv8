@@ -25,19 +25,22 @@ function hitungKembalian(bayar, harga){
   //Your code here
   var hasil = {}
 
-  for (var i = 0; i < ketersediaanUang.length; i++) {
-    var count = 0
-    var temp = bayar - harga
+  var kembali = bayar - harga
 
-    if (temp === 0) return hasil
-    if (temp < 0) return 'Uang tidak cukup'
-
-    if (ketersediaanUang[i].jumlah > 0 && temp - ketersediaanUang[i].nominal > 0) {
-      temp -= ketersediaanUang[i].nominal
-      hasil[ketersediaanUang[i].nominal] = count + 1
+  if (kembali > 0) {
+    var counter = 0
+    for (var i = 0; i < ketersediaanUang.length; i ++) {
+      while (kembali - ketersediaanUang[i].nominal > 0 && ketersediaanUang[i].jumlah > 0) {
+        kembali -= ketersediaanUang[i].nominal
+        hasil[ketersediaanUang[i].nominal] = counter + 1
+      }
     }
+    return hasil
+  } else if (kembali === 0) {
+    return hasil
+  } else {
+    return 'Uang tidak cukup!'
   }
- return hasil
 }
 
 // Test Case

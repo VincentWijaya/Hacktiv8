@@ -35,21 +35,29 @@
 function ganjilGenapAsianGames ( date, data ) {
   // Your code here
   var hasil = 0
+  var arrPlat = []
 
-  if (date%2 === 0 && date <= 31 && date > 0) {
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].type === 'Mobil') {
-        hasil++
+  if (date > 31 || date < 1) return 'Invalid Dates!'
+
+  for (var i = 0; i < data.length; i++) {
+    var temp = ''
+    var group = []
+    for (var j = 0; j < data[i].plat.length; j++) {
+      if (data[i].plat[j] === '0' || data[i].plat[j] === '1' || data[i].plat[j] === '2' || data[i].plat[j] === '3' || data[i].plat[j] === '4' || data[i].plat[j] === '5' || data[i].plat[j] === '6' || data[i].plat[j] === '7' || data[i].plat[j] === '8' || data[i].plat[j] === '9' ) {
+        temp += data[i].plat[j]
       }
     }
-  } else if (date%2 === 1 && date <= 31 && date > 0) {
-    for (var j = 0; j < data.length; j++) {
-      if (data[j].type === 'Mobil') {
-        hasil++
-      }
+    group.push(temp, data[i].type)
+    arrPlat.push(group)
+  }
+
+  for (var k = 0; k < arrPlat.length; k++) {
+    if (date%2 === 0 && arrPlat[k][1] === 'Mobil' && arrPlat[k][0][arrPlat[k][0].length - 1]%2 === 1) {
+      hasil++
     }
-  } else {
-    return 'Invalide DAte!'
+    if (date%2 === 1 && arrPlat[k][1] === 'Mobil' && arrPlat[k][0][arrPlat[k][0].length - 1]%2 === 0) {
+      hasil++
+    }
   }
 
   return hasil

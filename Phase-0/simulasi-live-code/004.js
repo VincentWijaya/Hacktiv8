@@ -34,13 +34,13 @@ function averageLengthWord(words) {
   }
 
   var rataan = Math.round(panjang / split.length)
-
+  
   for (var j = 0; j < split.length; j++) {
     if (split[j].length === rataan) {
       hasil.push(split[j])
     }
   }
-  return hasil 
+  return hasil
 }
 
 console.log(averageLengthWord('Do you want to become a great coder ?')); // ['you']
