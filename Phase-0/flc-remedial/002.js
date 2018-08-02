@@ -14,9 +14,7 @@ Pastikan kamu mengisi selang-seling, lihatlah pattern dari output di test case!
 function multiDimensionalXO(size) {
 
   var newArr = [];
-  var odanx = '';
   var counter = 0;
-  var counterXO = 0;
 
   if (size < 1) {
     return "Invalid input"
