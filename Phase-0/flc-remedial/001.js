@@ -29,9 +29,9 @@ output:
 
 function drawTriangle(num) {
   // hanya code disini
-  for (i = 1; i < num; i++) {
+  for (i = 1; i <= num; i++) {
     var temp = '';
-    for (j = num; j > i; j--) {
+    for (j = num; j >= i; j--) {
       temp += j;
     }
     console.log(temp);

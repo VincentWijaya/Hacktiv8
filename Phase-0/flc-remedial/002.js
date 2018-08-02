@@ -49,7 +49,7 @@ console.log(multiDimensionalXO(5));
 //   [ 'x', 'o', 'x', 'o', 'x' ] ]
 // */
 
-// console.log(multiDimensionalXO(6));
+console.log(multiDimensionalXO(6));
 // /*
 // [ [ 'x', 'o', 'x', 'o', 'x', 'o' ],
 //   [ 'x', 'o', 'x', 'o', 'x', 'o' ],
